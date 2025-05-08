@@ -1,20 +1,22 @@
 from django.shortcuts import render
-from student.models import Student
-from django.http import HttpResponse
-from django.shortcuts import render, redirect
 from student.forms import StudentForm
+
 # def home_view(request):
 #     name="adiguru prodigy"
 #     return render(request,"index.html",{"companyname":name,"age":2})
 
 
+
+
 def create_student_view(request):
     if request.method=="POST":
-        student_form=StudentForm(request.POST)
+        student_form = StudentForm(request.POST)
         if student_form.is_valid():
             student_form.save()
-    student_form=StudentForm()
-    return render(request,"student/create_student.html",{"form" :student_form })
+        else:
+            return render(request, "student/create_student.html", {"form": student_form})
+    student_form = StudentForm()
+    return render(request, "student/create_student.html", {"form": student_form })
 
 # def update_student_view(request,id):
 #     st=Student.objects.get(pk=id)

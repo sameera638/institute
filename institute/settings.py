@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'student',
     'blog',
     'Users',
+    'crispy_forms',
+    'crispy_bootstrap5',
     
     
 ]
@@ -130,3 +132,5 @@ STATICFILES_DIRS=[BASE_DIR/"staticfiles"]
 
 
 MEDIA_ROOT = BASE_DIR / "media"
+CRISPY_ALLOWED_TEMPLATE_PACKS= "bootstrap5"
+CRISPY_TEMPLATE_PACK= "bootstrap5"
