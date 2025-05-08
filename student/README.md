@@ -1,0 +1,1 @@
+python django full stack and application built on top of python,django framework,bootstrap5.
